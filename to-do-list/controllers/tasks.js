@@ -94,7 +94,7 @@ const updateTask = asyncWrapper(async (req,res) =>{
             runValidators:true,   //name is require--it can't be empty
         }) 
 
-        if(!task){
+        if(!task){  //we use next since we write a manual asyncWrapper which has next parameter(instead of using package)
             // return res.status(404).json({msg:`No task with id: ${taskID}`})
             //instead of the above line:
             return next(createCustomError(`No task with id: ${taskID}`, 404))  //second parameter is the status code
@@ -114,7 +114,7 @@ const deleteTask = asyncWrapper(async(req,res) =>{
         //check if the task is null or not
         if(!task){
             // return res.status(404).json({msg:`No task with id:${taskID}`})
-            //instead of the above line:
+            //instead of the above line: we use next since we write a manual asyncWrapper which has next parameter(instead of using package)
             return next(createCustomError(`No task with id: ${taskID}`, 404))  //second parameter is the status code
 
         }
