@@ -19,19 +19,9 @@ const db = knex({
   connection: {
 	
 connectionString: 'postgres://smart_brain_data_user:iHR8jLUrAaqkiN6cn6fh5CLmdPwFfGMb@dpg-cf0ct3kgqg45vesh0480-a/smart_brain_data',
-// Hostname: 'dpg-cf0ct3kgqg45vesh0480-a',
-// Port: 5432,
-// Database: 'smart_brain_data',
-// Username: 'smart_brain_data_user',
-// Password: 'iHR8jLUrAaqkiN6cn6fh5CLmdPwFfGMb',
-// ssl:true
+  ssl:true
 	  
-	  
-	  hostname: 'dpg-cf0ct3kgqg45vesh0480-a',
-	  username:'smart_brain_data_user',
-	  password: 'iHR8jLUrAaqkiN6cn6fh5CLmdPwFfGMb',
-	  database: 'smart_brain_data',
-	  port: 5432
+
   }
 });
 
